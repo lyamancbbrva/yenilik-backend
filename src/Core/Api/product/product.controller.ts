@@ -187,7 +187,10 @@ const getById = async (req:Request, res:Response, next:NextFunction) => {
         }))
     }
 }
+const search = async (req:Request, res:Response, next:NextFunction) => {
+    const {} = req.params
+}
 
 export const ProductController = () => ({
-    create, update, deletee, get, getById
+    create, update, deletee, get, getById, search
 })

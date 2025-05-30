@@ -5,11 +5,12 @@ import { v1Router } from "./routes";
 import swaggerUi from 'swagger-ui-express'
 import { swaggerSpec } from "./swagger/swagger";
 import cors from 'cors'
+import path from "path";
 
 dotenv.config();
 
 const app = express();
-
+app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')));
 const corsOptions: cors.CorsOptions = {
 	origin: 'http://localhost:3001',
 	methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],

@@ -206,6 +206,6 @@ const refreshToken = async (
 
 export const AuthController = () => ({
 	register,
-	login,
+		login,
 	refreshToken,
 });
